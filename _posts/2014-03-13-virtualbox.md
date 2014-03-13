@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MBA 2013でゲストOSとしてCentOSをkickstartで入れるとunsuported hardwareと出てインストールが自動で終わらない"
-date:   2014-03-03 22:57:26
+date:   2014-03-13 22:57:26
 categories: packer, virtualbox, centos
 ---
 
