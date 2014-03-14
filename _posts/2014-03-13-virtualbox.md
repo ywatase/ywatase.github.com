@@ -10,10 +10,10 @@ Mackbook Air 2013上のpackerでvirtualboxでCentos 6.5のboxを作っている�
 
 調べてみたら、RedHatのkickstartのページにちゃんと書いてある。
 
-https://access.redhat.com/site/documentation/ja-JP/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-kickstart2-options.html
+[32.4. キックスタートのオプション](https://access.redhat.com/site/documentation/ja-JP/Red_Hat_Enterprise_Linux/6/html/Installation_Guide/s1-kickstart2-options.html)
 
 ということで、kickstartの設定ファイルに
 
-	unsuported_hadreware
+	unsupported_hardware
 	
 と追加することで、警告を無視してキー入力待ちにならずに自動でインストールが完了します。
