@@ -32,6 +32,17 @@ gitlab.ymlのbin_path
 
 # 詳細
 
+gitlabでリポジトリを作ってプッシュしようとしたらこんなメッセージが出ました。
+
+```
+$ git push origin master
+fatal: '/home/git/repositories/share/test.git' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+```
+
 gitlab/lib/backup/repository.rb を見てみると
 
 	if system(*%W(git clone --bare #{path_to_bundle(project)} #{path_to_repo(project)}), silent)
@@ -52,7 +63,6 @@ PATHを比較してみると。。。
 	/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/git/bin
 
 /usr/local/binがない。
-コレってCentOSの問題かな。
-PATHの内部の並びもなんか変だし。。。
+でも、/usr/local/sbinはあるし順番も変だし謎
 
 ということで最初の結論にでした。
